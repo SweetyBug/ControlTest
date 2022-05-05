@@ -7,6 +7,13 @@
     }
 }
 
+void PrintArray(string[] mass)
+{
+    for(int i = 0; i < mass.Length; i++)
+    {
+        Console.Write(mass[i] + "; ");
+    }
+}
 
 int len = Convert.ToInt32(Console.ReadLine());
 string[] array = new string[len];
