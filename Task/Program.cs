@@ -1,4 +1,5 @@
-﻿void CreateArray(string[] mass)
+﻿//Создание массива
+void CreateArray(string[] mass)
 {
     for(int i = 0; i < mass.Length; i++)
     {
@@ -6,7 +7,7 @@
         mass[i] = Console.ReadLine();
     }
 }
-
+//Вывод массива
 void PrintArray(string[] mass)
 {
     for(int i = 0; i < mass.Length; i++)
@@ -16,17 +17,26 @@ void PrintArray(string[] mass)
 }
 
 Console.Write("Введите длину массива: ");
-int len = Convert.ToInt32(Console.ReadLine());
+int len = Convert.ToInt32(Console.ReadLine()); //задаем длину массива
 string[] array = new string[len];
 
 CreateArray(array);
 PrintArray(array);
 Console.WriteLine();
-
+int n;
 int k = -1;
 int j = 0;
-int n = new Random().Next(0, 4);
+if (len < 3)
+{
+    n = new Random().Next(0, len+1);
+}
+else
+{
+    n = new Random().Next(0, 4);
+}
 
+
+//Цикл, который выводит значения из массива
 while(j < n)
 {
     int m = new Random().Next(0, len);
